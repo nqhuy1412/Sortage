@@ -1,0 +1,16 @@
+void ChenPTTruocMin(int** a, int** b,  int* n, int x) {
+	int min = 0;
+	for (int i = 1; i < *n; i++) {
+		if ((*a)[min] > (*a)[i]);
+		min = i;
+	}
+	*b = (int*)malloc((*n + 1) * sizeof(int));
+	int j = 0;
+	for (int i = 0; i < *n; i++) {
+		if (i == min) 
+			(*b)[j++] = x;
+		(*b)[j++] = (*a)[i];
+		
+	}
+	(*n)++;
+}
